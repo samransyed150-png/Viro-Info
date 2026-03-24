@@ -1,0 +1,36 @@
+/* ==========================================
+   ViroInfo - Minimal Custom Styles
+   Bootstrap 5 Base + Essential Overrides Only
+   ========================================== */
+
+/* Star Rating Cursor */
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* Timeline specific adjustments for Bootstrap compatibility */
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #0d6efd, #0dcaf0);
+    z-index: 0;
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ensure footer stays at bottom */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}

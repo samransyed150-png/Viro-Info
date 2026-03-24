@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virus Database | ViroInfo - Virus Info Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+    <!-- Sticky Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+                <i class="bi bi-virus fs-4 me-2"></i>
+                <span>ViroInfo</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="viruses.html">Database</a></li>
+                    <li class="nav-item"><a class="nav-link" href="timeline.html">History</a></li>
+                    <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero -->
+        <section class="bg-primary text-white text-center py-5">
+            <div class="container py-4">
+                <h1 class="display-5 fw-bold">Virus Database</h1>
+                <p class="lead mb-0">Comprehensive catalog of viral pathogens with detailed information</p>
+            </div>
+        </section>
+
+        <!-- Database -->
+        <section class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold text-primary">Browse Viruses</h2>
+                    <p class="text-muted">Use the filters below to find specific types of viruses</p>
+                </div>
+
+                <!-- Filters -->
+                <div class="text-center mb-4 btn-group-filter">
+                    <button class="btn btn-primary" onclick="filterViruses('all')">All Viruses</button>
+                    <button class="btn btn-outline-primary" onclick="filterViruses('respiratory')">Respiratory</button>
+                    <button class="btn btn-outline-primary" onclick="filterViruses('vector')">Vector-borne</button>
+                    <button class="btn btn-outline-primary" onclick="filterViruses('contact')">Contact/Fluid</button>
+                </div>
+
+                <!-- Grid -->
+                <div class="row g-4">
+                    <!-- Card 1 -->
+                    <div class="col-md-6 col-lg-4 virus-card" data-type="respiratory">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-img-top bg-primary bg-opacity-10 d-flex align-items-center justify-content-center position-relative" style="height: 180px;">
+                                <i class="bi bi-virus fs-1 text-primary"></i>
+                                <span class="position-absolute top-0 end-0 m-2 badge bg-primary">2019</span>
+                            </div>
+                            <div class="card-body">
+                                <span class="badge bg-primary bg-opacity-10 text-primary mb-2">Respiratory</span>
+                                <h5 class="card-title text-primary">SARS-CoV-2 (COVID-19)</h5>
+                                <p class="card-text text-muted small">The virus that causes COVID-19. It primarily spreads through respiratory droplets and has caused a global pandemic affecting millions worldwide.</p>
+                                <p class="small text-muted mb-3">
+                                    <i class="bi bi-geo-alt me-1"></i> Wuhan, China
+                                    <span class="mx-2">|</span>
+                                    <i class="bi bi-people me-1"></i> Global
+                                </p>
+                                <a href="#" class="btn btn-primary w-100">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-md-6 col-lg-4 virus-card" data-type="contact">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-img-top bg-danger bg-opacity-10 d-flex align-items-center justify-content-center position-relative" style="height: 180px;">
+                                <i class="bi bi-virus fs-1 text-danger"></i>
+                                <span class="position-absolute top-0 end-0 m-2 badge bg-danger">1976</span>
+                            </div>
+                            <div class="card-body">
+                                <span class="badge bg-danger bg-opacity-10 text-danger mb-2">Contact</span>
+                                <h5 class="card-title text-danger">Ebola Virus</h5>
+                                <p class="card-text text-muted small">A rare but deadly virus that causes hemorrhagic fever. Transmitted through direct contact with blood or bodily fluids of infected persons.</p>
+                                <p class="small text-muted mb-3">
+                                    <i class="bi bi-geo-alt me-1"></i> DR Congo
+                                    <span class="mx-2">|</span>
+                                    <i class="bi bi-heart-pulse me-1"></i> High Fatality
+                                </p>
+                                <a href="#" class="btn btn-danger w-100">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-md-6 col-lg-4 virus-card" data-type="vector">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-img-top bg-success bg-opacity-10 d-flex align-items-center justify-content-center position-relative" style="height: 180px;">
+                                <i class="bi bi-bug fs-1 text-success"></i>
+                                <span class="position-absolute top-0 end-0 m-2 badge bg-success">1947</span>
+                            </div>
+                            <div class="card-body">
+                                <span class="badge bg-success bg-opacity-10 text-success mb-2">Vector-borne</span>
+                                <h5 class="card-title text-success">Zika Virus</h5>
+                                <p class="card-text text-muted small">Primarily spread by Aedes mosquitoes. Can cause birth defects if contracted during pregnancy. Symptoms include rash and joint pain.</p>
+                                <p class="small text-muted mb-3">
+                                    <i class="bi bi-geo-alt me-1"></i> Uganda
+                                    <span class="mx-2">|</span>
+                                    <i class="bi bi-bug me-1"></i> Mosquito
+                                </p>
+                                <a href="#" class="btn btn-success w-100">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="col-md-6 col-lg-4 virus-card" data-type="respiratory">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-img-top bg-warning bg-opacity-10 d-flex align-items-center justify-content-center position-relative" style="height: 180px;">
+                                <i class="bi bi-wind fs-1 text-warning"></i>
+                                <span class="position-absolute top-0 end-0 m-2 badge bg-warning text-dark">2009</span>
+                            </div>
+                            <div class="card-body">
+                                <span class="badge bg-warning bg-opacity-10 text-warning mb-2">Respiratory</span>
+                                <h5 class="card-title text-warning">Influenza H1N1</h5>
+                                <p class="card-text text-muted small">A subtype of influenza A virus. Known as Swine Flu during the 2009 pandemic. Contains a combination of flu genes not previously seen.</p>
+                                <p class="small text-muted mb-3">
+                                    <i class="bi bi-geo-alt me-1"></i> Mexico/USA
+                                    <span class="mx-2">|</span>
+                                    <i class="bi bi-shield-check me-1"></i> Vaccine Available
+                                </p>
+                                <a href="#" class="btn btn-warning w-100 text-white">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="col-md-6 col-lg-4 virus-card" data-type="vector">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-img-top bg-info bg-opacity-10 d-flex align-items-center justify-content-center position-relative" style="height: 180px;">
+                                <i class="bi bi-bug fs-1 text-info"></i>
+                                <span class="position-absolute top-0 end-0 m-2 badge bg-info text-dark">Ancient</span>
+                            </div>
+                            <div class="card-body">
+                                <span class="badge bg-info bg-opacity-10 text-info mb-2">Vector-borne</span>
+                                <h5 class="card-title text-info">Dengue Virus</h5>
+                                <p class="card-text text-muted small">Transmitted by Aedes mosquitoes. Causes severe flu-like illness and can develop into severe dengue, which is a leading cause of serious illness.</p>
+                                <p class="small text-muted mb-3">
+                                    <i class="bi bi-geo-alt me-1"></i> Southeast Asia
+                                    <span class="mx-2">|</span>
+                                    <i class="bi bi-thermometer-high me-1"></i> High Fever
+                                </p>
+                                <a href="#" class="btn btn-info w-100 text-white">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="col-md-6 col-lg-4 virus-card" data-type="contact">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-img-top bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center position-relative" style="height: 180px;">
+                                <i class="bi bi-ribbon fs-1 text-secondary"></i>
+                                <span class="position-absolute top-0 end-0 m-2 badge bg-secondary">1920s</span>
+                            </div>
+                            <div class="card-body">
+                                <span class="badge bg-secondary bg-opacity-10 text-secondary mb-2">Contact</span>
+                                <h5 class="card-title text-secondary">HIV / AIDS</h5>
+                                <p class="card-text text-muted small">Human Immunodeficiency Virus attacks the immune system. Managed with Antiretroviral Therapy (ART). Transmitted through specific body fluids.</p>
+                                <p class="small text-muted mb-3">
+                                    <i class="bi bi-geo-alt me-1"></i> Kinshasa, DRC
+                                    <span class="mx-2">|</span>
+                                    <i class="bi bi-capsule me-1"></i> Manageable
+                                </p>
+                                <a href="#" class="btn btn-secondary w-100">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-virus me-2"></i>ViroInfo</h5>
+                    <p class="text-white-50 small">Empowering the world with knowledge about viral pathogens.</p>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white-50 text-decoration-none small">Home</a></li>
+                        <li><a href="about.html" class="text-white-50 text-decoration-none small">About Us</a></li>
+                        <li><a href="viruses.html" class="text-white-50 text-decoration-none small">Database</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">Contact</h6>
+                    <ul class="list-unstyled text-white-50 small">
+                        <li><i class="bi bi-envelope me-2"></i> support@virusinfo.Hub</li>
+                        <li><i class="bi bi-twitter me-2"></i> @virusinfo</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-3 border-secondary">
+            <div class="text-center text-white-50 small">
+                <p class="mb-0">&copy; 2026 Virus Info Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

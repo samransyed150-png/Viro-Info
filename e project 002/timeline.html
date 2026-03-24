@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pandemic History | ViroInfo - Virus Info Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+    <!-- Sticky Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+                <i class="bi bi-virus fs-4 me-2"></i>
+                <span>ViroInfo</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="viruses.html">Database</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="timeline.html">History</a></li>
+                    <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero -->
+        <section class="bg-primary text-white text-center py-5">
+            <div class="container py-4">
+                <h1 class="display-5 fw-bold">Pandemic History</h1>
+                <p class="lead mb-0">A chronological journey through major viral outbreaks that shaped our world</p>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section class="py-5 bg-white">
+            <div class="container">
+                <div class="position-relative">
+                    <!-- Vertical Line -->
+                    <div class="timeline-line"></div>
+                    
+                    <!-- Items -->
+                    <div class="position-relative" style="z-index: 1;">
+                        <!-- COVID-19 -->
+                        <div class="row mb-5 align-items-center">
+                            <div class="col-5 text-end pe-4">
+                                <h4 class="fw-bold text-primary">COVID-19 Pandemic</h4>
+                                <span class="badge bg-primary">2019 - Present</span>
+                                <p class="text-muted small mt-2 mb-1">Caused by SARS-CoV-2, this pandemic reshaped global society, economies, and healthcare systems. Originating in Wuhan, China, it spread globally within months.</p>
+                                <small class="text-primary"><i class="bi bi-virus me-1"></i> Coronavirus | <i class="bi bi-globe me-1"></i> Global Impact</small>
+                            </div>
+                            <div class="col-2 text-center">
+                                <div class="bg-white rounded-circle border border-4 border-primary mx-auto shadow-sm" style="width: 24px; height: 24px;"></div>
+                            </div>
+                            <div class="col-5"></div>
+                        </div>
+
+                        <!-- Ebola -->
+                        <div class="row mb-5 align-items-center">
+                            <div class="col-5"></div>
+                            <div class="col-2 text-center">
+                                <div class="bg-white rounded-circle border border-4 border-danger mx-auto shadow-sm" style="width: 24px; height: 24px;"></div>
+                            </div>
+                            <div class="col-5 ps-4">
+                                <h4 class="fw-bold text-danger">Ebola Outbreak</h4>
+                                <span class="badge bg-danger">2014 - 2016</span>
+                                <p class="text-muted small mt-2 mb-1">The most widespread epidemic of Ebola virus disease in history, primarily affecting Guinea, Liberia, and Sierra Leone in West Africa.</p>
+                                <small class="text-danger"><i class="bi bi-heart-pulse me-1"></i> High Fatality | <i class="bi bi-geo-alt me-1"></i> West Africa</small>
+                            </div>
+                        </div>
+
+                        <!-- H1N1 -->
+                        <div class="row mb-5 align-items-center">
+                            <div class="col-5 text-end pe-4">
+                                <h4 class="fw-bold text-warning">H1N1 Swine Flu</h4>
+                                <span class="badge bg-warning text-dark">2009</span>
+                                <p class="text-muted small mt-2 mb-1">A new influenza virus that spread worldwide. It contained a combination of flu genes not previously seen in animals or people.</p>
+                                <small class="text-warning"><i class="bi bi-wind me-1"></i> Influenza | <i class="bi bi-shield-check me-1"></i> Vaccine Developed</small>
+                            </div>
+                            <div class="col-2 text-center">
+                                <div class="bg-white rounded-circle border border-4 border-warning mx-auto shadow-sm" style="width: 24px; height: 24px;"></div>
+                            </div>
+                            <div class="col-5"></div>
+                        </div>
+
+                        <!-- HIV/AIDS -->
+                        <div class="row mb-5 align-items-center">
+                            <div class="col-5"></div>
+                            <div class="col-2 text-center">
+                                <div class="bg-white rounded-circle border border-4 border-info mx-auto shadow-sm" style="width: 24px; height: 24px;"></div>
+                            </div>
+                            <div class="col-5 ps-4">
+                                <h4 class="fw-bold text-info">HIV/AIDS Recognition</h4>
+                                <span class="badge bg-info text-dark">1981</span>
+                                <p class="text-muted small mt-2 mb-1">The beginning of the AIDS pandemic. The virus attacks the immune system, leading to life-threatening opportunistic infections.</p>
+                                <small class="text-info"><i class="bi bi-ribbon me-1"></i> Retrovirus | <i class="bi bi-capsule me-1"></i> Treatment Available</small>
+                            </div>
+                        </div>
+
+                        <!-- Hong Kong Flu -->
+                        <div class="row mb-5 align-items-center">
+                            <div class="col-5 text-end pe-4">
+                                <h4 class="fw-bold text-success">Hong Kong Flu (H3N2)</h4>
+                                <span class="badge bg-success">1968</span>
+                                <p class="text-muted small mt-2 mb-1">A category 2 flu pandemic that originated in Hong Kong. It spread to the United States and caused an estimated 1-4 million deaths worldwide.</p>
+                                <small class="text-success"><i class="bi bi-virus me-1"></i> Influenza A | <i class="bi bi-people me-1"></i> 1-4M Deaths</small>
+                            </div>
+                            <div class="col-2 text-center">
+                                <div class="bg-white rounded-circle border border-4 border-success mx-auto shadow-sm" style="width: 24px; height: 24px;"></div>
+                            </div>
+                            <div class="col-5"></div>
+                        </div>
+
+                        <!-- Spanish Flu -->
+                        <div class="row align-items-center">
+                            <div class="col-5"></div>
+                            <div class="col-2 text-center">
+                                <div class="bg-white rounded-circle border border-4 border-secondary mx-auto shadow-sm" style="width: 24px; height: 24px;"></div>
+                            </div>
+                            <div class="col-5 ps-4">
+                                <h4 class="fw-bold text-secondary">Spanish Flu</h4>
+                                <span class="badge bg-secondary">1918</span>
+                                <p class="text-muted small mt-2 mb-1">The deadliest pandemic in modern history. Caused by H1N1 virus, it infected 500 million people and killed 50 million worldwide.</p>
+                                <small class="text-secondary"><i class="bi bi-heart-pulse me-1"></i> 50M Deaths | <i class="bi bi-globe-americas me-1"></i> Worldwide</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-virus me-2"></i>ViroInfo</h5>
+                    <p class="text-white-50 small">Empowering the world with knowledge about viral pathogens.</p>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white-50 text-decoration-none small">Home</a></li>
+                        <li><a href="about.html" class="text-white-50 text-decoration-none small">About Us</a></li>
+                        <li><a href="viruses.html" class="text-white-50 text-decoration-none small">Database</a></li>
+                        <li><a href="timeline.html" class="text-white-50 text-decoration-none small">History</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">Contact</h6>
+                    <ul class="list-unstyled text-white-50 small">
+                        <li><i class="bi bi-envelope me-2"></i> support@virusinfo.Hub</li>
+                        <li><i class="bi bi-twitter me-2"></i> @virusinfo</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-3 border-secondary">
+            <div class="text-center text-white-50 small">
+                <p class="mb-0">&copy; 2026 Virus Info Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
